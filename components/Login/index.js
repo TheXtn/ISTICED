@@ -90,9 +90,7 @@ export default function LoginComp() {
                                     <InputGroup>
                                         <InputLeftElement
                                             pointerEvents="none"
-
-                                            children={<CFaUserAlt color="gray.300" />}
-                                        />
+                                        ><CFaUserAlt color="gray.300" /></InputLeftElement>
                                         <Input value={cin} onChange={(e)=>setcin(e.target.value)} type="text" placeholder="CIN "  disabled={loading} />
                                     </InputGroup>
                                 </FormControl>
@@ -105,9 +103,7 @@ export default function LoginComp() {
                                     <InputGroup>
                                         <InputLeftElement
                                             pointerEvents="none"
-                                            color="gray.300"
-                                            children={<CFaLock color="gray.300" />}
-                                        />
+                                        ><CFaLock color="gray.300" /></InputLeftElement>
                                         <Input
                                             disabled={loading}
                                             type={showPassword ? "text" : "password"}
