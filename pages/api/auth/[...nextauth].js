@@ -41,19 +41,8 @@ export default NextAuth({
     }),
   ],
   jwt:{
-    secret: process.env.JWT_SECRET,
-    encryption: true,
-    decryptionOptions: {
-      algorithms: ['A256GCM']
-
-    },
-    verificationOptions : {
-      maxTokenAge: `${60*60}s`, // e.g. `${30 * 24 * 60 * 60}s` = 30 days
-      algorithms: ['HS512']
-    },
+    secret: process.env.JWT_SECRET
 
   },
-   callbacks: {
 
-  },
 });
