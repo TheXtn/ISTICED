@@ -122,7 +122,7 @@ export default function LoginComp() {
                                 <Button type="submit"  w={"full"}>Login</Button>
                             </GridItem>
                             <GridItem colSpan={2}>
-                                {loading?<Progress color={"purple"} size="xs" isIndeterminate />:""}
+                                {loading?<Progress colorScheme={"purple"} size="xs" isIndeterminate />:""}
                             </GridItem>
                         </SimpleGrid></Center>
 
