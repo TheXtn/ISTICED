@@ -5,12 +5,13 @@ import {
     FormControl,
     FormLabel,
     GridItem,
-    Heading,
+    Heading, Select,
     Input, InputGroup, InputLeftElement, InputRightElement,
     SimpleGrid, HStack,
     Text, useColorMode, useColorModeValue, useToast,
-    VStack, Box, Progress, Stack, useDisclosure, ScaleFade,
+    VStack, Box, Progress, Stack, useDisclosure, ScaleFade, Spinner,
 } from "@chakra-ui/react";
+import useSWR from 'swr'
 import React, {useState} from "react";
 import NextImage from "next/image";
 import {FaLock, FaUserAlt} from "react-icons/fa";
@@ -18,21 +19,30 @@ import {useRouter} from "next/router";
 import {getSession, signIn} from "next-auth/client";
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
+const fetcher = url => fetch(url).then(r => r.json())
 export default function Ho(){
+    const { data, error } = useSWR('/api/Subjects', fetcher)
     const [mat,setmat]=useState("")
     const [sem,setsem]=useState("")
+    const [subjects,setsubjects]=useState([])
     const {toggleColorMode}=useColorMode()
-    const { isOpen, onToggle } = useDisclosure()
+    const [isOpen,setisopen]=useState(false)
     const [isopen2,setisopen2]=useState(false)
     const bg=useColorModeValue("gray.50","whiteAlpha.50")
     function handleclick(e){
         setmat(e.target.value)
-        setisopen2(!isopen2)
+        setisopen2(true)
     }
-    function  handleclick2(e){
+    async function handleclick2(e){
         setsem(e.target.value)
-        onToggle()
+        setisopen(true)
+
     }
+    function ShowSub(){
+
+
+}
+
     return(
 
         <Stack h={["auto","100vh"]} py={20} direction={['column','row']} spacing={10}  >
@@ -47,12 +57,22 @@ export default function Ho(){
             <ScaleFade initialScale={0.9} in={isOpen}>
                 <VStack boxShadow="2xl" bgColor={bg} w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']}>
                     <Heading>{sem}</Heading>
-                    <VStack spacing={10}>
+                    <VStack spacing={10} w={"full"} h={"full"}>
+                        {data?<div> <Select onChange={handleclick}>
+                            {data.Subjects.map((Subject)=>{
+                                return(
 
-                        <Button color={"white"} bg="#5000ca" w={"full"} value={"Analyse"} onClick={handleclick}>Analyse</Button>
-                        <Button color={"white"} bg="#5000ca" w={"full"} value={"Algebre"} onClick={handleclick}>Algorithme</Button>
-                        <Button color={"white"} bg="#5000ca" w={"full"} value={"Systeme Logique"} onClick={handleclick}>Systeme Logique</Button>
-                    </VStack>
+                                <option key={Subject} value={Subject}>{Subject}</option>
+
+
+                                )})}
+                            </Select>
+                        </div>
+                            :
+
+                            <p><Spinner size="xl" /></p>}
+
+                       </VStack>
                 </VStack>
             </ScaleFade>
             <VStack   w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']}>
