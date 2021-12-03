@@ -16,7 +16,7 @@ function Lay(props) {
 
 
 
-      <SmallWithSocial/>
+
 
     </Fragment>
   );

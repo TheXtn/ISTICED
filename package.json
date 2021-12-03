@@ -14,6 +14,7 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@fontsource/open-sans": "^4.5.1",
+    "aos": "^3.0.0-beta.6",
     "axios": "^0.22.0",
     "bcryptjs": "^2.4.3",
     "framer-motion": "^4.1.17",
@@ -25,6 +26,7 @@
     "react-icons": "^4.3.1",
     "react-loading-overlay": "^1.0.1",
     "react-loadingmask": "^4.0.6",
+    "react-reveal": "^1.2.2",
     "react-spinners": "^0.11.0",
     "swr": "^1.0.1"
   },

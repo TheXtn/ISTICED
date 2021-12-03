@@ -9,7 +9,9 @@ import Lay from "../components/Layout/Lay";
 import theme from "../theme"
 import "@fontsource/open-sans/700.css"
 import {Nav} from "../components/Layout";
+
 function MyApp({ Component, pageProps }) {
+
   const [loading, setLoading] = React.useState(false);
   React.useEffect(() => {
     const start = () => {
