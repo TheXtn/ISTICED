@@ -106,7 +106,7 @@ export default function Home() {
                 />
 
                 </HStack><Text fontSize="xl">
-                <Bounce right cascade>Consult your results anytime you want .</Bounce>
+                <Bounce bottom cascade>Consult your results anytime you want .</Bounce>
 
 
 
@@ -132,7 +132,7 @@ export default function Home() {
                     <Box maxW="32rem">
                         <Heading  color={useColorModeValue("black","white")} mb={4}>Device Friendly</Heading>
                         <Text fontSize="xl">
-                            <Bounce left cascade>Consult your results from anywhere .</Bounce>
+                            <Bounce bottom cascade>Consult your results from anywhere .</Bounce>
 
 
 
