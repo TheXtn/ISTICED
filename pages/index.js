@@ -31,7 +31,7 @@ export default function Home() {
     return(
     <VStack w={'full'} h={'full'}>
         <Flex h={["auto","100vh"]} py={20} direction={['column-reverse','row']}>
-            <Zoom >
+          
             <VStack w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
 
                 <VStack spacing={10} alignItems={"flex-start"}>
@@ -52,8 +52,8 @@ export default function Home() {
                     </Link>
                 </Box>
 
-            </VStack></Zoom>
-            <Zoom >
+            </VStack>
+         
             <VStack w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']} >
 
                 <NextImage
@@ -67,8 +67,7 @@ export default function Home() {
 
 
 
-            </VStack></Zoom>
-
+            </VStack>
         </Flex>
 
     <Flex h={["auto","100vh"]} py={20} direction={['column-reverse','row']}>
