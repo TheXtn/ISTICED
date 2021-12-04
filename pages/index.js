@@ -16,6 +16,7 @@ import {
     Flex,
     useColorModeValue
 } from "@chakra-ui/react"
+import { Link as L } from 'react-scroll'
 import {Fragment, useState} from "react";
 import NextImage from "next/image";
 import img from "../public/coding.svg";
@@ -25,14 +26,64 @@ import img4 from "../public/anni.svg"
 import Fade from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
 import Bounce from 'react-reveal/Bounce';
-import Zoom from 'react-reveal/Zoom';
+import Particles from 'react-particles-js';
+import config from "./config"
+import styless from "./config.module.css"
+import Typewriter from 'typewriter-effect'
+import Zoom from 'react-reveal/Zoom'
+
 export default function Home() {
-    const bg=useColorModeValue("gray.10","whiteAlpha.50")
+
+    const bg =useColorModeValue("gray.10","whiteAlpha.50")
     return(
+        <div className={styless.html}>
+            <VStack spacing={10} className={styless.con}>
+                <Particles className={styless.particles} params={config.particles} >
+
+                </Particles>
+                <Heading color={"#660066"} className={styless.centered}>Hello, Welcome To <span className={styless.name}>ISTIC</span>.{' '}
+                    <span className="wave-emoji" role="img" aria-label="waving hand">
+                👋
+              </span>
+                    <br/>
+                    <Typewriter
+                        options={{
+                            strings: [
+                                'LGLSI.',
+                                'ISI.',
+                                'LAII.',
+                                'LT.',
+                            ],
+                            autoStart: true,
+                            loop: true,
+                            deleteSpeed: 10,
+                            cursor: '<',
+                            delay: 100,
+                        }}
+                    />
+                    <br/>
+                    <L
+                        activeClass="active"
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        offset={-63}
+                        duration={500}
+                    >
+                        ﹀
+                    </L>
+                </Heading>
+
+
+
+            </VStack>
+
+
     <VStack w={'full'} h={'full'}>
-        <Flex h={["auto","100vh"]} py={20} direction={['column-reverse','row']}>
-          
-            <VStack w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
+
+        <Flex className={styless.home} h={["auto","100vh"]} py={20} direction={['column-reverse','row']} id={"home"}>
+            <Zoom>
+            <VStack  w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
 
                 <VStack spacing={10} alignItems={"flex-start"}>
                     <Heading color={"#660066"}>Istic Borj Cedria</Heading>
@@ -52,8 +103,8 @@ export default function Home() {
                     </Link>
                 </Box>
 
-            </VStack>
-         
+            </VStack></Zoom>
+            <Zoom>
             <VStack w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']} >
 
                 <NextImage
@@ -67,7 +118,7 @@ export default function Home() {
 
 
 
-            </VStack>
+            </VStack></Zoom>
         </Flex>
 
     <Flex h={["auto","100vh"]} py={20} direction={['column-reverse','row']}>
@@ -94,6 +145,12 @@ export default function Home() {
                 <Badge ml="1" fontSize="0.8em" colorScheme="purple">Internal Platform</Badge>
             </VStack>
             <Box maxW="32rem">
+                <Text fontSize="xl">
+                    <Bounce bottom cascade>Consult your results anytime you want .</Bounce>
+
+
+
+                </Text>
                 <HStack>
                     <Heading  color={useColorModeValue("black","white")} mb={4}>Results details</Heading>
                 <NextImage
@@ -105,12 +162,7 @@ export default function Home() {
                     blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
                 />
 
-                </HStack><Text fontSize="xl">
-                <Bounce bottom cascade>Consult your results anytime you want .</Bounce>
-
-
-
-            </Text>
+                </HStack>
                 <Divider colorScheme={'purple'} size={"300"}/>
 
                 <br/>
@@ -162,7 +214,7 @@ export default function Home() {
 
 
         </Flex>
-    </VStack>
+    </VStack>   </div>
 
 
 
