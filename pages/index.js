@@ -27,8 +27,8 @@ import Fade from 'react-reveal/Zoom';
 import Slide from 'react-reveal/Slide';
 import Bounce from 'react-reveal/Bounce';
 import Particles from 'react-particles-js';
-import config from "./config"
-import styless from "./config.module.css"
+import config from "../config/config"
+import styless from "../config/config.module.css"
 import Typewriter from 'typewriter-effect'
 import Zoom from 'react-reveal/Zoom'
 
