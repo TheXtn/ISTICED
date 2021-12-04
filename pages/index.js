@@ -31,52 +31,14 @@ import config from "../config/config"
 import styless from "../config/config.module.css"
 import Typewriter from 'typewriter-effect'
 import Zoom from 'react-reveal/Zoom'
+import Wrap from "../components/wrapper";
 
 export default function Home() {
 
     const bg =useColorModeValue("gray.10","whiteAlpha.50")
     return(
         <div className={styless.html}>
-            <VStack spacing={10} className={styless.con}>
-                <Particles className={styless.particles} params={config.particles} >
-
-                </Particles>
-                <Heading color={"#660066"} className={styless.centered}>Hello, Welcome To <span className={styless.name}>ISTIC</span>.{' '}
-                    <span className="wave-emoji" role="img" aria-label="waving hand">
-                👋
-              </span>
-                    <br/>
-                    <Typewriter
-                        options={{
-                            strings: [
-                                'LGLSI.',
-                                'ISI.',
-                                'LAII.',
-                                'LT.',
-                            ],
-                            autoStart: true,
-                            loop: true,
-                            deleteSpeed: 10,
-                            cursor: '<',
-                            delay: 100,
-                        }}
-                    />
-                    <br/>
-                    <L
-                        activeClass="active"
-                        to="home"
-                        spy={true}
-                        smooth={true}
-                        offset={-63}
-                        duration={500}
-                    >
-                        ﹀
-                    </L>
-                </Heading>
-
-
-
-            </VStack>
+            <Wrap/>
 
 
     <VStack w={'full'} h={'full'}>
