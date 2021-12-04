@@ -43,7 +43,7 @@ export default function Home() {
 
     <VStack w={'full'} h={'full'}>
 
-        <Flex className={styless.home} h={["auto","100vh"]} py={20} direction={['column-reverse','row']} id={"home"}>
+        <Flex h={["auto","100vh"]} py={20} direction={['column-reverse','row']} id={"home"}>
             <Zoom>
             <VStack  w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
 
