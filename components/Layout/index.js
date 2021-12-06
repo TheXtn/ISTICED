@@ -144,20 +144,17 @@ export const Nav = () => {
         flexDir="column"
       >
         <Flex justify="flex-end">
-          <IconButton
-              top="1.1rem"
-        right="90%"
-      mr={{ base: 2, md: 0 }}
-              bg={"transparent"}
-            mt={2}
-
-            aria-label="Open Menu"
-            size="lg"
-            icon={
-              <CloseIcon />
-            }
-            onClick={() => changeDisplay('none')}
-          />
+            <IconButton
+                bg={"transparent"}
+                aria-label="Open Menu"
+                size="lg"
+                mr={2}
+                icon={
+                    <CloseIcon />
+                }
+                onClick={() => changeDisplay('none')}
+                display={['flex', 'flex', 'none', 'none']}
+            />
         </Flex>
 
         <Flex
