@@ -4,13 +4,15 @@ import config from "../../config/config";
 import {Heading, VStack} from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 import {Link as L} from "react-scroll";
+import img from "../../public/bg.svg";
+import NextImage from "next/image";
 
 export default function Wrap(){
     return(
         <VStack spacing={10} className={styless.con}>
-            <Particles className={styless.particles} params={config.particles} >
+            <div className={styless.particles} >
 
-            </Particles>
+            </div>
             <Heading color={"#660066"} className={styless.centered}>Hello, Welcome To <span className={styless.name}>ISTIC</span>.{' '}
                 <span className="wave-emoji" role="img" aria-label="waving hand">
                 👋
