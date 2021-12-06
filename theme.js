@@ -9,7 +9,10 @@ const breakpoints = createBreakpoints({
 },)
 
 const config={
-
+  fonts: {
+    heading: 'Alef',
+    body: 'Raleway',
+  },
 }
 
 const theme = extendTheme(config,breakpoints)

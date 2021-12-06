@@ -21,7 +21,7 @@ module.exports = {
                 enable: true,
                 distance: 450,
                 color: '#923794',
-                opacity: 0.1,
+                opacity: 0,
                 width: 1,
             },
             move: {
