@@ -6,7 +6,14 @@ import classes from "../config/config.module.css";
 import NextImage from "next/image";
 import Zoom from 'react-reveal/Zoom'
 export default function Ab(){
-    const code = `const about()=>{
+	return (
+		<div>
+		<Text>
+				Under Construction..
+		</Text>
+		</div>
+	)
+   /* const code = `const about()=>{
             Console.log("Special thanks to stackoverflow");
             Console.log("Made With ♥");
             Console.log("By");
@@ -35,7 +42,7 @@ export default function Ab(){
 
 
                 </Stack>
-
+*/
 
 
 
