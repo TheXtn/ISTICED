@@ -18,7 +18,7 @@ export default function Ab(){
 
                 <Stack p={5} spacing={20} direction={['column','column','row']}   w={"80rem"} h={"25rem"}  marginLeft={"10%"} marginTop={"5%"} boxShadow="xl">
 
-                        <Box w={"50%"} h={"full"} boxShadow={"xl"} boxShadow="xl" >
+                        <Box w={"50%"} h={"full"} boxShadow={"xl"}  >
                             <Zoom>
                             <NextImage
                                 src={img}
