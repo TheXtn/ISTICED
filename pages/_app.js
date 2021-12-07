@@ -38,6 +38,7 @@ function MyApp({ Component, pageProps }) {
   return(
 
       <ChakraProvider theme={theme}>
+
         <title>ISTIC EDU</title>
         <Nav/>
         {loading?<Progress size="xs" colorScheme={"purple"} isIndeterminate />:<Lay><Component {...pageProps} /></Lay>}

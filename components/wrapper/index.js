@@ -1,12 +1,12 @@
 import styless from "../../config/config.module.css";
 import Particles from "react-particles-js";
 import config from "../../config/config";
-import {Heading, VStack} from "@chakra-ui/react";
+import {Heading,Text, VStack} from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 import {Link as L} from "react-scroll";
 import img from "../../public/bg.svg";
 import NextImage from "next/image";
-
+import arrow from  "../../public/ddown.png"
 export default function Wrap(){
     return(
         <VStack spacing={10} className={styless.con}>
@@ -42,7 +42,12 @@ export default function Wrap(){
                     offset={-63}
                     duration={500}
                 >
-                    ﹀
+                    <div className={styless.arrows}><div className={styless.chevron}></div>
+                        <div className={styless.chevron}></div>
+                        <div className={styless.chevron}></div>
+                    </div>
+
+
                 </L>
             </Heading>
 

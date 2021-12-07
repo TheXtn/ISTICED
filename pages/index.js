@@ -35,148 +35,149 @@ import Wrap from "../components/wrapper";
 
 export default function Home() {
 
+
     const bg =useColorModeValue("gray.10","whiteAlpha.50")
     return(
         <div className={styless.html}>
             <Wrap/>
 
 
-    <VStack w={'full'} h={'full'}>
+            <VStack  w={'full'} h={'full'}>
 
-        <Flex h={["auto","100vh"]} py={20} direction={['column-reverse','row']} id={"home"}>
-            <Zoom>
-            <VStack  w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
+                <Stack h={["auto","100vh"]} py={20} direction={['column-reverse',"column-reverse",'row']} id={"home"}>
+                    <Zoom>
+                        <VStack  w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
 
-                <VStack spacing={10} alignItems={"flex-start"}>
-                    <Heading color={"#660066"}>Istic Borj Cedria</Heading>
-                    <Badge ml="1" fontSize="0.8em" colorScheme="purple">Internal Platform</Badge>
-                </VStack>
-                <Box maxW="32rem">
-                    <Heading  color={useColorModeValue("black","white")} mb={4}>Welcome to ISTIC Internal Platform</Heading>
-                    <Text fontSize="xl">
-                        Your university marks and stats will be shown here .
-                    </Text>
-                    <Divider colorScheme={'purple'} size={"300"}/>
-                    <br/>
-                    <Link href={'/student'}>
-                        <Button bg="#5000ca" color='white' size="lg">
-                            Student Area
-                        </Button>
-                    </Link>
-                </Box>
+                            <VStack spacing={10} alignItems={"flex-start"}>
+                                <Heading color={"#660066"}>Istic Borj Cedria</Heading>
+                                <Badge ml="1" fontSize="0.8em" colorScheme="purple">Internal Platform</Badge>
+                            </VStack>
+                            <Box maxW="32rem">
+                                <Heading  color={useColorModeValue("black","white")} mb={4}>Welcome to ISTIC Internal Platform</Heading>
+                                <Text fontSize="xl">
+                                    Your university marks and stats will be shown here .
+                                </Text>
+                                <Divider colorScheme={'purple'} size={"300"}/>
+                                <br/>
+                                <Link href={'/student'}>
+                                    <Button bg="#5000ca" color='white' size="lg">
+                                        Student Area
+                                    </Button>
+                                </Link>
+                            </Box>
 
-            </VStack></Zoom>
-            <Zoom>
-            <VStack w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']} >
+                        </VStack></Zoom>
+                    <Zoom>
+                        <VStack w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']} >
 
-                <NextImage
-                    src={img}
-                    width="500"
-                    height="500"
-                    alt={"Hello"}
-                    placeholder="blur"
-                    blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
-                />
-
-
-
-            </VStack></Zoom>
-        </Flex>
-
-    <Flex h={["auto","100vh"]} py={20} direction={['column-reverse','row']}>
-        <Fade  >
-        <VStack w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']} >
-            <Bounce right cascade>
-            <NextImage
-                src={img2}
-                width="500"
-                height="500"
-                alt={"Hello"}
-                placeholder="blur"
-                blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
-            /></Bounce>
+                            <NextImage
+                                src={img}
+                                width="500"
+                                height="500"
+                                alt={"Hello"}
+                                placeholder="blur"
+                                blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
+                            />
 
 
 
-        </VStack></Fade>
-        <Fade>
-        <VStack w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
+                        </VStack></Zoom>
+                </Stack>
 
-            <VStack spacing={10} alignItems={"flex-start"}>
-                <Heading color={"#660066"}>RealTime Results</Heading>
-                <Badge ml="1" fontSize="0.8em" colorScheme="purple">Internal Platform</Badge>
-            </VStack>
-            <Box maxW="32rem">
-                <Text fontSize="xl">
-                    <Bounce bottom cascade>Consult your results anytime you want .</Bounce>
-
-
-
-                </Text>
-                <HStack>
-                    <Heading  color={useColorModeValue("black","white")} mb={4}>Results details</Heading>
-                <NextImage
-                    src={img4}
-                    width="350"
-                    height="350"
-                    alt={"Hello"}
-                    placeholder="blur"
-                    blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
-                />
-
-                </HStack>
-                <Divider colorScheme={'purple'} size={"300"}/>
-
-                <br/>
-
-            </Box>
-
-        </VStack></Fade>
-
-
-    </Flex>
-        <Flex h={["auto","100vh"]} py={20} direction={['column-reverse','row']}>
-            <Fade>
-                <VStack w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
-
-                    <VStack spacing={10} alignItems={"flex-start"}>
-                        <Heading color={"#660066"}>From anywhere</Heading>
-                        <Badge ml="1" fontSize="0.8em" colorScheme="purple">Internal Platform</Badge>
-                    </VStack>
-                    <Box maxW="32rem">
-                        <Heading  color={useColorModeValue("black","white")} mb={4}>Device Friendly</Heading>
-                        <Text fontSize="xl">
-                            <Bounce bottom cascade>Consult your results from anywhere .</Bounce>
+                <Stack h={["auto","100vh"]} py={20} direction={['column-reverse','row']}>
+                    <Fade  >
+                        <VStack w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']} >
+                            <Bounce right cascade>
+                                <NextImage
+                                    src={img2}
+                                    width="500"
+                                    height="500"
+                                    alt={"Hello"}
+                                    placeholder="blur"
+                                    blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
+                                /></Bounce>
 
 
 
-                        </Text>
-                        <Divider colorScheme={'purple'} size={"300"}/>
-                        <br/>
+                        </VStack></Fade>
+                    <Fade>
+                        <VStack w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
 
-                    </Box>
-
-                </VStack></Fade>
-            <Fade  >
-                <VStack w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']} >
-                    <Bounce right cascade>
-                        <NextImage
-                            src={img3}
-                            width="500"
-                            height="500"
-                            alt={"Hello"}
-                            placeholder="blur"
-                            blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
-                        /></Bounce>
+                            <VStack spacing={10} alignItems={"flex-start"}>
+                                <Heading color={"#660066"}>RealTime Results</Heading>
+                                <Badge ml="1" fontSize="0.8em" colorScheme="purple">Internal Platform</Badge>
+                            </VStack>
+                            <Box maxW="32rem">
+                                <Text fontSize="xl">
+                                    <Bounce bottom cascade>Consult your results anytime you want .</Bounce>
 
 
 
-                </VStack></Fade>
+                                </Text>
+                                <HStack>
+                                    <Heading  color={useColorModeValue("black","white")} mb={4}>Results details</Heading>
+                                    <NextImage
+                                        src={img4}
+                                        width="350"
+                                        height="350"
+                                        alt={"Hello"}
+                                        placeholder="blur"
+                                        blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
+                                    />
+
+                                </HStack>
+                                <Divider colorScheme={'purple'} size={"300"}/>
+
+                                <br/>
+
+                            </Box>
+
+                        </VStack></Fade>
+
+
+                </Stack>
+                <Stack h={["auto","100vh"]} py={20} direction={['column-reverse','row']}>
+                    <Fade>
+                        <VStack w={"full"} h={"full"} p={10} spacing={20} alignItems={"flex-start"} bg={bg} boxShadow="2xl" rounded="md"   >
+
+                            <VStack spacing={10} alignItems={"flex-start"}>
+                                <Heading color={"#660066"}>From anywhere</Heading>
+                                <Badge ml="1" fontSize="0.8em" colorScheme="purple">Internal Platform</Badge>
+                            </VStack>
+                            <Box maxW="32rem">
+                                <Heading  color={useColorModeValue("black","white")} mb={4}>Device Friendly</Heading>
+                                <Text fontSize="xl">
+                                    <Bounce bottom cascade>Consult your results from anywhere .</Bounce>
 
 
 
-        </Flex>
-    </VStack>   </div>
+                                </Text>
+                                <Divider colorScheme={'purple'} size={"300"}/>
+                                <br/>
+
+                            </Box>
+
+                        </VStack></Fade>
+                    <Fade  >
+                        <VStack w={"full"} h={"full"} p={10} spacing={10} alignItems={"flex-start"} direction={['column','row']} >
+                            <Bounce right cascade>
+                                <NextImage
+                                    src={img3}
+                                    width="500"
+                                    height="500"
+                                    alt={"Hello"}
+                                    placeholder="blur"
+                                    blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
+                                /></Bounce>
+
+
+
+                        </VStack></Fade>
+
+
+
+                </Stack>
+            </VStack>   </div>
 
 
 
