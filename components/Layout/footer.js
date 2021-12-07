@@ -7,7 +7,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
 } from '@chakra-ui/react';
-
+import classes from "./lay.module.css";
 import { ReactNode } from 'react';
 
 
@@ -38,16 +38,7 @@ export default function SmallWithSocial() {
     const { colorMode, toggleColorMode } = useColorMode()
   const isDark = colorMode === 'dark'
   return (
-    <Box
-position= 'absolute'
-
-   bottom='0'
-   width='100%'
-   height='60px'   /* Height of the footer */
-
-
-      bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
+    <div className={classes.footer}>
 
 
       <Container
@@ -61,6 +52,6 @@ position= 'absolute'
         <Text>© Made with ❤️ By <a href={'https://yussefmrt.me'}>Yussef mrt</a> </Text>
 
       </Container>
-    </Box>
+    </div>
   );
 }

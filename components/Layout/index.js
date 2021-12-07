@@ -110,7 +110,17 @@ export const Nav = () => {
 
           )
            }
-
+            <Link href="/about" passHref>
+                <Button
+                    as="a"
+                    variant="ghost"
+                    aria-label="About"
+                    my={5}
+                    w="50%"
+                >
+                    About
+                </Button>
+            </Link>
         </Flex>}
 
 
@@ -225,6 +235,18 @@ export const Nav = () => {
 
           )
           }
+            <Link href="/about" passHref>
+                <Button
+                    as="a"
+                    variant="ghost"
+                    aria-label="About"
+                    my={5}
+                    w="100%"
+                    onClick={() => changeDisplay('none')}
+                >
+                    About
+                </Button>
+            </Link>
             <IconButton
                 variant="ghost"
                 my={5}

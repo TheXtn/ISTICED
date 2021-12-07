@@ -12,6 +12,7 @@ import {Nav} from "../components/Layout";
 import '@fontsource/raleway/400.css'
 import '@fontsource/open-sans/700.css'
 import "@fontsource/alef/700.css"
+import SmallWithSocial from "../components/Layout/footer";
 function MyApp({ Component, pageProps }) {
 
   const [loading, setLoading] = React.useState(false);
@@ -42,7 +43,6 @@ function MyApp({ Component, pageProps }) {
         <title>ISTIC EDU</title>
         <Nav/>
         {loading?<Progress size="xs" colorScheme={"purple"} isIndeterminate />:<Lay><Component {...pageProps} /></Lay>}
-
 
 
 

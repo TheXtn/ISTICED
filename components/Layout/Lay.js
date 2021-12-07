@@ -10,10 +10,9 @@ function Lay(props) {
 
     >
 
-      <Container h={["180vh","100vh"]} maxW={"container.xlll"} p={0}>
+      <Container h={["10000px","100vh"]} maxW={"container.xlll"} p={0}>
         {props.children}
       </Container>
-
 
 
 
