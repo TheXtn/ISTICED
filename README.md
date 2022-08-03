@@ -1,3 +1,4 @@
 ## ISTICED
-Students space where they can check their results
-https://isticed.vercel.app
+-Students space where they can check their results.
+-Stack: NodeJS,NextJS,MongoDB,NextAUTH
+-https://isticed.vercel.app
